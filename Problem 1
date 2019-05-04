@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+int PackA=995;
+int PackB=1495;
+int PackC=1995;
+int Package, hrs;
+
+cout <<"Enter your package subscription: \n1 - Package A\n2 - Package B\n3 - Package C\n input: ";
+cin>>Package; 
+cout <<"Enter hours used: ";
+cin>>hrs;
+
+switch(Package){
+case 1: { if (hrs<=10)
+cout <<"Bill: Php "<<PackA <<".00\n";
+else if (hrs>10){
+hrs=hrs-10;
+hrs*=20;
+cout <<"Bill: Php "<<PackA+hrs <<".00 \n"; 
+break;}
+}
+case 2: { if (hrs<=20)
+cout <<"Bill: Php "<<PackB <<".00\n";
+else if (hrs>20){
+hrs=hrs-20;
+hrs*=10;
+cout <<"Bill: Php "<<PackB+hrs <<".00 \n"; 
+break;
+}
+case 3: cout<<"Bill: Php "<<PackC <<".00 \n";
+break;
+default: cout <<"Invalid Input";
+}
+
+return 0;
+}
