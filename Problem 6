@@ -1,0 +1,22 @@
+#include<iostream> 
+using namespace std;
+ 
+int main()
+{
+   int terms=20,i; 
+   int t1=0,t2=1,sum;
+   cout<<"Fibonacci numbers: \n0, 1, ";
+ 
+   for (i=0;i<terms;i++)
+   {
+   	sum=t1+t2;
+    t1=t2;
+    t2=sum;
+    cout<<sum;
+    
+    if (i!=20)
+    cout<<", ";
+   }
+ 	
+   return 0;
+}
