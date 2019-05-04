@@ -1,12 +1,14 @@
 #include <iostream>
-#include <conio.h>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
+  cout.precision(4);
 	const float z=2.5;
 	float y, V;
-	int x;
+	int width=10, x;
 	
 	cout<<"Enter first integer: ";
 	cin>>x;
@@ -16,40 +18,42 @@ int main()
 	switch (x)
 	{
 		case 1:
-			if (y<1 && y<5)
+			if ((y>1)&&(y<5))
 			{
 				V=x*y*z;
-				cout<<"The value of V is: "<<V<<"."<<endl;
+				cout<<"The value of V is: "<< setw(width)<<setprecision(4)<<V<<endl;
 			}
 			else if (y>=5)
 			{
 				V=x+y/z;
-				cout<<"The value of V is: "<<V<<"."<<endl;
+				cout<<"The value of V is: "<< setw(width)<<setprecision(4)<<V<<endl;
 			}
 			break;
 			
 		case 2:
 			if (y<=5)
 			{
-				float abs(float V);
+				//float abs(V);
 				
 				V=x-y/z;
 				V=abs(V);
-				cout<<"The value of V is: "<<V<<"."<<endl;
+				cout<<"The value of V is: "<< setw(width)<<setprecision(4)<<V<<endl;
 			}
 			else if (y>5)
 			{
-				float sqrt(float y, float z);
+			  y+=z;
+				//float sqrt(y);
 				
-				V=x-sqrt(y, z);
-				cout<<"The value of V is: "<<V<<"."<<endl;
+				V = sqrt(y);
+				V-=x;
+				cout<<"The value of V is: "<< setw(width)<<setprecision(4)<<V<<endl;
 			}
 			break;
 			
 		default:
 			{
 				V=x+y+z;
-				cout<<"The value of V is: "<<V<<"."<<endl;
+				cout<< setw(width)<<"The value of V is: "<< setw(width)<<setprecision(4)<<V<<endl;
 			}
 			
 	}
