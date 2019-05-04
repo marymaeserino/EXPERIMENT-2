@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+
+{
+	const int initial = 35;
+	const float charge = 1.10;
+	const int late = 20;
+	float gA, gB, bill, bA, bB, unpaidBalance;
+	char name, answer;
+	
+	cout << "Welcome to Marina Water Services!" << endl;
+	cout << "Enter Account Name:" ; cin >> name;
+	cout << "Do you have any unpaid balance? (A - yes or B - No)"; cin >> answer;
+	
+	if ((answer == 'A') || (answer == 'B'))
+	{
+		cout << "Enter the Meter Readings in the gallon last month:"; cin >> gA;
+		cout << "Enter the Meter Readings in the gallon this month:"; cin >> gB;
+	}
+	
+	switch (answer)
+	{
+		case 'A':
+			cout << "Enter unpaid balance:"; cin >> unpaidBalance;
+			bB = ((initial + (charge * gA)) + (initial + (charge * gB)));
+			bill = (((initial + (charge * gA)) (initial + (charge * gB)) + (unpaidBalance + 20));
+			cout << "Your Total Water Bill is:" << ' ' << bill << endl;
+			break;
+			
+		case 'B':
+			bA = (initial + (charge * gA));
+			bill = ((initial + (charge * gA)) + (initial + (charge * gB)));
+			cout << "Your total water bill is:" << ' ' << bill << endl;
+			break;
+	}
+	
+	_getch();
+	return0;
+}
